@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playball');
+
+body {
+  background: url("https://res.cloudinary.com/synee/image/upload/c_scale,w_1879/v1534298079/Webp.net-compress-image_cmv2xf.jpg");
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  padding: 5px 25px;
+  margin: 0;
+  color: white;
+}
+
+#Header h1{
+  font-family: "Playball", serif;
+  font-size: 32px;
+  padding-left: 25%;
+  padding: 10px;
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0%;
+  color: white;
+  
+}
+#Header p{
+  font-family: "Playball", serif;
+  font-size: 18px;
+  padding-left: 35%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 65%;
+  color: white;
+}

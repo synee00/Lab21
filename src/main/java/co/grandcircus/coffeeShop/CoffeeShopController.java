@@ -36,12 +36,21 @@ public class CoffeeShopController {
 			@RequestParam("number") String number, 
 			@RequestParam("password") String password)
 	{
+		User user = new User();
+		user.setFname(fname);
+		user.setLname(lname);
+		user.setEmail(email);
+		user.setNumber(number);
+		user.setPassword(password);
+		
 		ModelAndView mav = new ModelAndView("summary");
-		mav.addObject("fname" , fname);
+		mav.addObject("user", user);
+		
+		/*mav.addObject("fname" , fname);
 		mav.addObject("lname", lname);
 		mav.addObject("email" , email);
 		mav.addObject("number", number);
-		mav.addObject("password" , password);
+		mav.addObject("password" , password);*/
 		return mav;
 		
 	}
