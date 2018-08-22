@@ -15,25 +15,78 @@ body {
   margin: 0;
   color: white;
 }
+h1{
+	color: white;
+  	font-family: "Playball";
+	width: 65%;
+	padding-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	text-align: center;
+}
+#reg{
+	color: white;
+  	font-family: "Playball";
+	width: 65%;
+	padding-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	text-align: center;
+}
+/* unvisited link */
+a:link {
+    color: white;
+}
 
-#Header h1{
-  font-family: "Playball", serif;
-  font-size: 32px;
-  padding-left: 25%;
+/* visited link */
+a:visited {
+    color: gray;
+}
+
+/* mouse over link */
+a:hover {
+    color: gray;
+}
+
+/* selected link */
+a:active {
+    color: gray;
+}
+
+
+table, th{
+  background-color: black;
+  font-family: "Merriweather";
+  color: white;
+  opacity: 0.8;
   padding: 10px;
   width: 65%;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 0%;
-  color: white;
-  
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: auto;
 }
-#Header p{
-  font-family: "Playball", serif;
-  font-size: 18px;
-  padding-left: 35%;
-  margin-right: auto;
-  margin-left: auto;
-  width: 65%;
-  color: white;
+th{
+  text-align: left;
 }
+td{
+  padding-left: 10px;
+}
+#noBorder{
+  border: 0px solid black;
+  padding-left: 50px;
+}
+#alignRight{
+  text-align: left;
+}
+input{
+  width: 50px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+input[type=submit]{
+  width:50%;

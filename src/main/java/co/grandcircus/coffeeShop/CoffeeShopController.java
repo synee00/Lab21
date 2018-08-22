@@ -4,6 +4,9 @@ August 15, 2018
 package co.grandcircus.coffeeShop;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,12 +16,23 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CoffeeShopController {
 	
+	@Autowired
+	private UserDao userDao;
+	
+	@Autowired
+	private ItemsDao itemsDao;
+	
 	@RequestMapping("/")
 	public ModelAndView showHomePage()
 	{
+		/*Items items = new Items();
 		ModelAndView mav = new ModelAndView("index");
+		mav.addObject("items", items);
+
+		return mav;*/
 		
-		return mav;
+		List<Items> items = itemsDao.findAll();
+		return new ModelAndView("index", "items", items);
 		
 	}
 	@RequestMapping("/register")
@@ -42,6 +56,8 @@ public class CoffeeShopController {
 		user.setEmail(email);
 		user.setNumber(number);
 		user.setPassword(password);
+		
+		userDao.create(user);
 		
 		ModelAndView mav = new ModelAndView("summary");
 		mav.addObject("user", user);
